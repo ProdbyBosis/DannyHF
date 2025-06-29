@@ -20,11 +20,9 @@ jobs:
         java-version: '17'
 
     - name: Fix gradlew permissions
-  run: |
-    ls -la
-    chmod +x gradlew
+      run: chmod +x ./gradlew
 
-    - name: Build with Gradle
+    - name: Build APK
       run: ./gradlew assembleDebug
 
     - name: Upload APK
